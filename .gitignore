@@ -1,0 +1,25 @@
+# Build outputs
+build/
+dist/
+.hvigor/
+build-profile.json5
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Signatures
+*.p7b
+*.jks
+*.keystore

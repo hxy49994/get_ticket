@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "大麦抢票助手",
+    "description": "$string:app_desc",
+    "icon": "$media:app_icon",
+    "label": "$string:app_label"
+  },
+  "string": {
+    "app_desc": "一款自动抢票工具",
+    "app_label": "抢票助手",
+    "module_desc": "抢票助手主模块",
+    "EntryAbility_desc": "抢票助手入口",
+    "EntryAbility_label": "抢票助手",
+    "ticket_service_desc": "后台抢票服务",
+    "internet_reason": "用于访问大麦 API",
+    "background_reason": "用于后台定时任务",
+    "float_window_reason": "用于显示倒计时悬浮窗",
+    "start_window_background": "#FFFFFF"
+  }
+}

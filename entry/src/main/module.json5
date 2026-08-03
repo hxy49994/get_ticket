@@ -1,0 +1,78 @@
+{
+  "app": {
+    "bundleName": "com.example.damai_ticket",
+    "vendor": "your_company",
+    "versionCode": 1000000,
+    "versionName": "1.0.0"
+  },
+  "module": {
+    "name": "entry",
+    "type": "entry",
+    "description": "$string:module_desc",
+    "mainElement": "EntryAbility",
+    "deviceTypes": ["phone", "tablet"],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.INTERNET",
+        "reason": "网络请求",
+        "usedScene": {
+          "abilities": ["EntryAbility"],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.SYSTEM_ALERT_WINDOW",
+        "reason": "悬浮窗显示倒计时",
+        "usedScene": {
+          "abilities": ["EntryAbility"],
+          "when": "inuse"
+        }
+      },
+      {
+        "name": "ohos.permission.ACCESS_A11Y",
+        "reason": "模拟点击操作",
+        "usedScene": {
+          "abilities": ["EntryAbility"],
+          "when": "inuse"
+        }
+      }
+    ],
+    "abilities": [
+      {
+        "name": "EntryAbility",
+        "srcEntry": "./ets/entryability/EntryAbility.ets",
+        "description": "$string:EntryAbility_desc",
+        "icon": "$media:icon",
+        "label": "$string:EntryAbility_label",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true,
+        "skills": [
+          {
+            "entities": ["entity.system.home"],
+            "actions": ["action.system.home"]
+          }
+        ]
+      },
+      {
+        "name": "TicketServiceAbility",
+        "srcEntry": "./ets/services/TicketServiceAbility.ets",
+        "description": "$string:ticket_service_desc",
+        "exported": false,
+        "skills": [
+          {
+            "actions": ["action.system.background"]
+          }
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "name": "TicketWorkExtension",
+        "srcEntry": "./ets/extensions/TicketWorkExtension.ets",
+        "type": "work",
+        "exported": false
+      }
+    ]
+  }
+}
